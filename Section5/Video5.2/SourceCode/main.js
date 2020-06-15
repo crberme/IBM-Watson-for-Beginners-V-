@@ -1,9 +1,12 @@
-var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
+var PersonalityInsightsV3 = require('ibm-watson/personality-insights/v3');
+var { IamAuthenticator } = require('ibm-watson/auth');
 
 var personalityInsights = new PersonalityInsightsV3({
-  version_date: '2017-10-13',
-  username: '97c7abc5-a460-463e-97bf-ee2beb4bfb0e',
-  password: 'nDa5kv6VmMnI'
+  version: '{version}',
+  authenticator: new IamAuthenticator({
+    apikey: '{apikey}',
+  }),
+  url: '{url}',
 });
 
 var profileParams = {
