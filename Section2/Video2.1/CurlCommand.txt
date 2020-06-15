@@ -1,5 +1,5 @@
-curl -u "{username}":"{password}" \
+curl -u "apikey:{apikey}" \
 -X POST \
--H "Accept: application/json" \
--d '{"text":"Hello, this is our first test of Watson APIs", "model_id":"en-es"}' \
-"https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+-H "Content-type: application/json" \
+-d "{\"text\": [\"Hello, this is our first test of Watson APIs\"], \"model_id\":\"en-es\"}" \
+"{url}/v3/translate?version=2018-05-01"
